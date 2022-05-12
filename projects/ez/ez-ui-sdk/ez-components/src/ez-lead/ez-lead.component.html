@@ -1,0 +1,14 @@
+<div>
+  <ez-h1>
+    <ng-content select="[title]"></ng-content>
+  </ez-h1>
+  <div style="text-align: right;">
+    <ez-solid-button (click)="onSolidClick()">
+      <ng-content select="[solidButton]"></ng-content>
+    </ez-solid-button>
+    <ez-outline-button (click)="onOutlineClick()">
+      <ng-content select="[outlineButton]"></ng-content>
+    </ez-outline-button>
+  </div>
+</div>
+

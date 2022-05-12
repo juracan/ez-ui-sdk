@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@ez/ez-ui-sdk": {
+      "projectType": "library",
+      "root": "projects/ez/ez-ui-sdk",
+      "sourceRoot": "projects/ez/ez-ui-sdk/src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ez/ez-ui-sdk/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ez/ez-ui-sdk/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ez/ez-ui-sdk/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ez/ez-ui-sdk/test.ts",
+            "tsConfig": "projects/ez/ez-ui-sdk/tsconfig.spec.json",
+            "karmaConfig": "projects/ez/ez-ui-sdk/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@ez/ez-ui-sdk"
 }

@@ -2,6 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@jaykain/ez-ui-sdk/*": [
+        "projects/ez/ez-ui-sdk/*"
+      ],
+      "@jaykain/ez-ui-sdk": [
+        "projects/ez/ez-ui-sdk"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
